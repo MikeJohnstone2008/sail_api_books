@@ -1,0 +1,38 @@
+<ol class="breadcrumb">
+    <li class="active">Home</a></li>
+</ol>
+
+<br/>
+
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Books</h2>
+<table class="table table-striped table-bordered" id="booksTable" style="width:100%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Categories</th>
+      <th>Author Last Name</th>
+      <th>First Name</th>
+      <th>Date Published</th>
+      <th>Other Titles</th>
+      <th>id</th>
+    </tr>
+  </thead>
+
+  <tbody id="booksList">
+  <% if(typeof books != "undefined" && books.length > 0){ %>
+    <% books.forEach(function(book){ %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.categories %></td>
+        <td><%= book.authLName %></td>
+        <td><%= book.authFName %></td>
+        <td><%= book.datePublished %></td>
+        <td><%= book.otherTitles %></td>
+        <td><%= book.id %></td>
+      </tr>
+    <% }) %>
+  <% } %>
+  </tbody>
+</table>

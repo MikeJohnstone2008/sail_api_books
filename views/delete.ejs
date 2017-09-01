@@ -1,0 +1,33 @@
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">Delete Book</a></li>
+</ol>
+
+<br/>
+
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Delete Book</h2>
+
+<div style="text-align: center; padding-top:50px">
+  <form action="/delete" method="POST">
+    <div class="form-group dropdown">
+      <label for="book_id">SELECT A BOOK TO DELETE</label><br/>
+      <select class="selectpicker dropdown-header" data-header="Select a book" id="book_id" name="book_id">
+      <% if(typeof books != "undefined" && books.length > 0){ %>
+        <% books.forEach(function(book){ %>
+          <option data-icon="glyphicon-user" value="<%= book.id %>">
+            <%= book.authLName + ", " +  book.authFName %>
+          </option>
+        <% }) %>
+      <% } %>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-danger">
+        DELETE BOOK
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </div>
+  </form>
+</div>

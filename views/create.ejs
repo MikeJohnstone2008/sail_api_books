@@ -1,0 +1,97 @@
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">Add A Book</a></li>
+</ol>
+
+<br/>
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Add A Book</h2>
+
+<div class="container">
+  <h1>Add your own book recommendations!</h1>
+
+  <form action="/create" method="POST" class="form-horizontal" id="bookAddForm">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input type="text" name="title" class="form-control" id="title" placeholder="Enter your title here">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Category</label>
+      <div class="col-sm-10">
+        <input type="text" name="category" class="form-control" id="category" placeholder="Enter the category">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Author Last Name</label>
+      <div class="col-sm-10">
+        <input type="text" name="authLName" class="form-control" id="authLName" placeholder="Enter the Last Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Author First Name</label>
+      <div class="col-sm-10">
+        <input type="text" name="authFName" class="form-control" id="authFName" placeholder="Enter the First Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Date Published</label>
+      <div class="col-sm-10">
+        <input type="text" name="datePublished" class="form-control" id="datePublished" placeholder="Enter the Date book was published">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Other Titles by the Author</label>
+      <div class="col-sm-10">
+        <input type="text" name="otherTitles" class="form-control" id="otherTitles" placeholder="Enter other book titles by the author">
+      </div>
+    </div>
+    <button id="addBook" type="submit" class="button btn-default">Add Book</button>
+  </form>
+</div>
+
+<!-- <form action="/create" method="POST" class="form-horizontal" id="addStudentForm">
+  <div class="form-group">
+    <label for="first_name" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="last_name" name="last_name"  placeholder="Last Name" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="start_date" class="col-sm-2 control-label">Start Date</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="start_date" name="start_date" placeholder="2017-01-01" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="gpa" class="col-sm-2 control-label">GPA</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="gpa" name="gpa" placeholder="4.0">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="sat" class="col-sm-2 control-label">SAT Score</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sat" name="sat" placeholder="1400">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="major_id" class="col-sm-2 control-label">Major ID</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="major_id" name="major_id">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Add Student</button>
+    </div>
+  </div>
+</form> -->
