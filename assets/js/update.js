@@ -43,7 +43,7 @@
 (function() {
 
     $(function() {
-      alert("this page loaded");
+      // alert("this page loaded");
       //code goes here
       $("#updateBookForm :input").prop("disabled", true);
 
